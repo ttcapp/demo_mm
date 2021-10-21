@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 String avaterSrc = "https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png";
+String btnText1= "Butten one";
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -20,7 +21,14 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text("Abdul Momin"),
       ),
-      body: SingleChildScrollView(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image/images1.jpg"),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(Colors.black12.withOpacity(0.2), BlendMode.dstATop),
+          ),
+        ),
         child: Column(
           children: [
             Row(
@@ -100,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               border: Border.all(
                                 width: 1,
                                 color: Colors.black
-                              )
+                              ),
                             ),
                             child: Padding(
                               padding: const EdgeInsets.only(
@@ -115,13 +123,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                 border: Border.all(
                                     width: 1,
                                     color: Colors.black
-                                )
+                                ),
                             ),
                             child: Padding(
                               padding: const EdgeInsets.only(
-                                  top: 4, left: 24, right: 24, bottom: 4
+                                  top: 4, left: 4, right: 4, bottom: 4
                               ),
-                              child: Icon(Icons.account_circle_rounded,size: 15,),
+                              child: Icon(Icons.account_circle_rounded,size: 17,),
                             ),
                           ),
                         ],
@@ -130,7 +138,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ],
-            )
+            ),
+            ElevatedButton(
+                onPressed:(){
+                  setState(() {
+                    btnText1="Butten click";
+                  });
+                },
+                child: Text(btnText1)
+            ),
           ],
         ),
       ),
