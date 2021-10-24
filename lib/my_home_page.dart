@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 
 String avaterSrc = "https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png";
 String btnText1= "Butten one";
@@ -20,6 +21,10 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.indigo,
         centerTitle: true,
         title: Text("Abdul Momin"),
+        leading: IconButton(
+            onPressed: () => SlideDrawer.of(context)!.toggle(),
+            icon:  Icon(Icons.menu),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
