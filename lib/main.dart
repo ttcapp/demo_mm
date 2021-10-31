@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       home: SlideDrawer(
         backgroundColor: Colors.blueAccent,
         rotateAngle: pi/42,
-        offsetFromRight: 300,
+        offsetFromRight: 80,
         items: [
           MenuItem('Home', onTap: (){},icon: Icons.input),
           MenuItem('Project', onTap: (){
