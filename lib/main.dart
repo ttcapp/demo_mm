@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:demomm/home_work.dart';
 import 'package:demomm/my_home_page.dart';
 import 'package:demomm/second_page.dart';
 import 'package:demomm/third_page.dart';
@@ -24,7 +25,11 @@ class MyApp extends StatelessWidget {
         rotateAngle: pi/42,
         offsetFromRight: 80,
         items: [
-          MenuItem('Home', onTap: (){},icon: Icons.input),
+          MenuItem('Home', onTap: (){
+            navigatorKey.currentState!.push(
+              MaterialPageRoute(builder: (context)=>HomeWork())
+            );
+          },icon: Icons.input),
           MenuItem('Project', onTap: (){
             navigatorKey.currentState!.push(
               MaterialPageRoute(builder: (context)=>SecondPage())
